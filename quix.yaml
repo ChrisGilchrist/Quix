@@ -5,7 +5,27 @@ metadata:
   version: 1.0
 
 # This section describes the Deployments of the data pipeline
-deployments: []
+deployments:
+  - name: Sentiment Demo UI
+    application: Sentiment Demo UI
+    deploymentType: Service
+    version: 5f310ed14acbca8972c0911dc06c7a2a9ece6e8e
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    desiredStatus: Running
+    variables:
+      - name: sentiment
+        inputType: FreeText
+        description: The topic to read from
+        required: true
+        value: sentiment
+      - name: messages
+        inputType: FreeText
+        description: The topic to read from
+        required: true
+        value: messages
 
 # This section describes the Topics of the data pipeline
 topics:
