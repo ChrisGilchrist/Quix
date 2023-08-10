@@ -15,6 +15,6 @@ variables:
     inputType: FreeText
     description: ''
     defaultValue: draft
-    required: false
+    required: true
 dockerfile: src/build/dockerfile
 defaultFile: src/app/services/quix.service.ts
