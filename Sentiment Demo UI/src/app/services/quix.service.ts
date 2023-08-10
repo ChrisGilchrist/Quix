@@ -10,7 +10,7 @@ import { ParameterData } from '../models/parameterData';
   providedIn: 'root'
 })
 export class QuixService {
-
+sdss
   /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
   /*WORKING LOCALLY? UPDATE THESE!*/
   private workingLocally = false; // set to true if working locally
