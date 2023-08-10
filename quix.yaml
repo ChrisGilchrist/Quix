@@ -9,7 +9,7 @@ deployments: []
 
 # This section describes the Topics of the data pipeline
 topics:
-  - name: sentiment
+  - name: draft
     persisted: false
     configuration:
       partitions: 2
@@ -17,6 +17,13 @@ topics:
       retentionInMinutes: 60
       retentionInBytes: 52428800
   - name: messages
+    persisted: false
+    configuration:
+      partitions: 2
+      replicationFactor: 2
+      retentionInMinutes: 60
+      retentionInBytes: 52428800
+  - name: sentiment
     persisted: false
     configuration:
       partitions: 2
