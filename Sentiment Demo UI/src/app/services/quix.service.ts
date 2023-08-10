@@ -25,7 +25,7 @@ export enum ConnectionStatus {
 export class QuixService {
   /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
   /*WORKING LOCALLY? UPDATE THESE!*/
-  private workingLocally = true; // set to true if working locally
+  private workingLocally = false; // set to true if working locally
   private token: string =
     "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlpXeUJqWTgzcXotZW1pUlZDd1I4dyJ9.eyJodHRwczovL3F1aXguYWkvb3JnX2lkIjoicXVpeGRldiIsImh0dHBzOi8vcXVpeC5haS9vd25lcl9pZCI6ImF1dGgwfDIxOTFlNGI2LWM3NDAtNGVlMi05Zjk1LWExMTVkMjcwYTVjMCIsImh0dHBzOi8vcXVpeC5haS90b2tlbl9pZCI6IjFjMDhkNjM4LTIwNTEtNDljYy05NDFiLWMwNWRmOGM5M2M2NCIsImh0dHBzOi8vcXVpeC5haS9leHAiOiIxNjkzMzUwMDAwIiwiaHR0cHM6Ly9xdWl4LmFpL3JvbGVzIjoiYWRtaW4iLCJpc3MiOiJodHRwczovL2F1dGguZGV2LnF1aXguYWkvIiwic3ViIjoiUjlOeWVYTnZvcWpobUVtd0djVWx3anFLdUFoTG9nam9AY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vcG9ydGFsLWFwaS5kZXYucXVpeC5haS8iLCJpYXQiOjE2OTE0MzY0MDUsImV4cCI6MTY5NDAyODQwNSwiYXpwIjoiUjlOeWVYTnZvcWpobUVtd0djVWx3anFLdUFoTG9nam8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6W119.Ad0dEL9UhnHU8DI_lUr5yuuVUJ4xKRfwfck82sJs2TJ4ubqMmo_wzceaSB0k_1PcfHVE3pvtYJFUaSdcqsYvFTAvn6YTXqR_hVDu2uuCy_4JeuEt9zxKLLhZ_sxq4ne4Y1gjtP5ExgpTtYJJNt8Eziwl_1jhqJefXN1d7G81Fv0prcBtwAVq7Fi0U_NbpBXdb_g_ivmH3NJDk_gDeHRx8fiA6ISAvjZpX_Xfi_tM1B1WDRUlvRn6X4cAadwXVtg86a2bXUgW_pK0V03oepOxrYiY58JPXTqHT4XdXPuj8lXVOs0RBxNBKJxOyNwKoVLr2VvtQSdMvUVi8aslDzPY7A"; // Create a token in the Tokens menu and paste it here
   public workspaceId: string = "quixdev-chrisexternal-istyping"; // Look in the URL for the Quix Portal your workspace ID is after 'workspace='
@@ -34,7 +34,7 @@ export class QuixService {
   public sentimentTopic: string = "sentiment"; // get topic name from the Topics page
   /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
 
-  private subdomain = "dev"; // leave as 'platform'
+  private subdomain = "platform"; // leave as 'platform'
   readonly server = ""; // leave blank
 
   private readerReconnectAttempts: number = 0;
