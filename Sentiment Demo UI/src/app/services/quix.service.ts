@@ -77,18 +77,14 @@ export class QuixService {
       let token$ = this.httpClient.get(this.server + 'sdk_token', {headers, responseType: 'text'});
       let portalApi$ = this.httpClient.get(this.server + "portal_api", {headers, responseType: 'text'})
 
-      let value$ = combineLatest([
+      combineLatest([
         workspaceId$,
         messagesTopic$,
         draftTopic$,
         sentimentTopic$,
         token$,
         portalApi$
-      ]).pipe(map(([workspaceId, messagesTopic, draftTopic, sentimentTopic, token, portalApi]) => {
-        return {workspaceId, messagesTopic, draftTopic, sentimentTopic, token, portalApi};
-      }));
-
-      value$.subscribe(({ workspaceId, messagesTopic, draftTopic, sentimentTopic, token, portalApi }) => {
+      ]).subscribe(([workspaceId, messagesTopic, draftTopic, sentimentTopic, token, portalApi ]) => {
         this.workspaceId = this.stripLineFeed(workspaceId);
         this.messagesTopic = this.stripLineFeed(this.workspaceId + '-' + messagesTopic);
         this.messagesDraftTopic = this.stripLineFeed(this.workspaceId + '-' + draftTopic);
